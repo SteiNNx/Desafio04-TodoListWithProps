@@ -11,7 +11,7 @@
       <button @click="addTask">Agregar</button>
     </section>
     <section>
-      <TodoList :tasks="tasks" />
+      <TodoList :tasks="tasks" :deleteTaks="deleteTaks" />
     </section>
   </div>
 </template>
@@ -35,6 +35,9 @@ export default {
       const { task } = this;
       this.tasks.push(task);
     },
+    deleteTaks(indexTask) {
+      this.tasks.splice(indexTask, 1);
+    },
   },
 };
 </script>
@@ -47,5 +50,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+label {
+  font-weight: 700;
+  margin: 0rem 1rem;
+}
+
+button {
+  padding: 0.1rem 0.75rem;
+  margin: 0rem 1rem;
 }
 </style>
