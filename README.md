@@ -1,19 +1,11 @@
-# trabajando-con-props
+# **Desafio Trabajando con Props(TodoList)**
+Desafio 04, Modulo 04 VueJS
 
-## Project setup
-```
-npm install
-```
+[Ver Sitio(Vercel)](https://desafio04-todo-list-with-props.vercel.app/)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## **Capitulos**
+* VueCLI.
+* Parent y Child Component.
+* Props COmponent.
+* $emit
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
