@@ -2,7 +2,7 @@
   <ul>
     <li v-for="(task, i) in tasks" :key="i">
       {{ task }}
-      <button @click="deleteTaks(i)">Eliminar</button>
+      <button @click="emitedDeleteTask(i)">Eliminar</button>
     </li>
   </ul>
 </template>
@@ -12,10 +12,17 @@ export default {
   name: "TodoList",
   props: {
     tasks: [],
-    deleteTaks: { type: Function },
+  },
+  methods: {
+    emitedDeleteTask(index) {
+      this.$emit("deleteTaks", index);
+    },
   },
 };
 </script>
 
-<style>
+<style scoped>
+ul {
+  font-weight: 700;
+}
 </style>
